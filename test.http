@@ -1,0 +1,41 @@
+
+### ADD EMPLOYEE
+POST http://localhost:5000/api/employees
+Content-Type: application/json
+
+{
+  "name": "Avinash Kumar",
+  "email": "avinash@gmail.com",
+  "department": "IT",
+  "salary": 35000
+}
+
+### GET ALL EMPLOYEES
+GET http://localhost:5000/api/employees
+
+
+### UPDATE EMPLOYEE
+PUT http://localhost:5000/api/employees/1
+Content-Type: application/json
+
+{
+    "name": "Avinash Kumar",
+    "email": "avinash@gmail.com",
+    "department": "CSE-AIML",
+    "salary": 45000
+}
+
+### DELETE EMPLOYEE
+DELETE http://localhost:5000/api/employees/1
+
+
+### Test backend email validation
+POST http://localhost:5000/api/employees
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "invalid-email",
+  "department": "IT",
+  "salary": 30000
+}
